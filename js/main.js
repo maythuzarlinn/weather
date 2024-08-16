@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     async function fetchWeather(lat, lon) {
         // Request using GET method
-        await fetch(`http://www.7timer.info/bin/civillight.php?lon=${lon}&lat=${lat}&product=civillight&output=json`, {
+        await fetch(`https://www.7timer.info/bin/civillight.php?lon=${lon}&lat=${lat}&product=civillight&output=json`, {
             method: 'GET',
         }).then(response => {
             if (!response.ok) {
