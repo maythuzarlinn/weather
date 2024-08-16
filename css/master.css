@@ -1,0 +1,105 @@
+body {
+    background-color: #00449e;
+    background-image: url("../images/bkg.png");
+    color: black;
+}
+
+body h1 {
+    text-align: center;
+    text-shadow: #ffffff;
+    text-decoration: wavy;
+    font-size: x-large;
+    color: orange;
+}
+
+body h5 {
+    text-align: center;
+    text-shadow: #ffffff;
+    color: #3130308a;
+}
+
+.copyright-power {
+    display: flex;
+    justify-content: center;
+    color: #becbff;
+    font-size: 18px;
+}
+
+.copyright-power a {
+    margin-left: 5px;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.copyright-power a:visited {
+    color: #f1f1f1;
+}
+
+.copyright-power a:hover {
+    text-decoration: underline;
+}
+
+.selector {
+    display: flex;
+    justify-content: center;
+}
+
+#locationSelectId {
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#showWeather {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.weather-day {
+    background-color: #3130308a;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    width: 90px;
+    text-align: center;
+}
+
+.weather-day .day-color {
+    font-size: 1.2rem;
+    color: orange;
+    margin: 0 0 10px 0;
+}
+
+.weather-day img {
+    width: 80px;
+    height: 40px;
+}
+
+.weather-day .temp {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #f1f1f1;
+}
+
+footer .copyright-text {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #becbff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    z-index: 1000;
+}
