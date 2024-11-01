@@ -101,20 +101,29 @@ document.addEventListener('DOMContentLoaded', async function () {
     });
 
     async function fetchWeather(lat, lon) {
-        // Request using GET method
-        await fetch(`https://www.7timer.info/bin/civillight.php?lon=${lon}&lat=${lat}&product=civillight&output=json`, {
-            method: 'GET',
-        }).then(response => {
+        // Show loading indicator
+        document.getElementById('loading').style.display = 'block';
+
+        try {
+            const response = await fetch(`https://www.7timer.info/bin/civillight.php?lon=${lon}&lat=${lat}&product=civillight&output=json`, {
+                method: 'GET',
+            });
+
             if (!response.ok) {
                 throw new Error(`HTTP Error! Status: ${response.status}`);
             }
-            return response.json();
-        }).then(data => {
+
+            const data = await response.json();
             displayWeather(data.dataseries);
-        }).catch(error => {
+
+        } catch (error) {
             console.error("Error fetching data: ", error);
-        });
+        } finally {
+            // Hide loading indicator
+            document.getElementById('loading').style.display = 'none';
+        }
     }
+
 
     function displayWeather(weather_data) {
         let weather_container = document.getElementById('showWeather');
